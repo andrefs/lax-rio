@@ -19,6 +19,6 @@ default = []
 generalized = ["rio_api/generalized"]
 
 [dependencies]
-oxilangtag = "0.1"
-oxiri = { path = "../../oxiri/" }
-rio_api = { version = "0.7", path="../api" }
+oxilangtag = { git = "https://github.com/andrefs/lax-oxilangtag" }
+oxiri = { path = "https://github.com/andrefs/lax-oxiri" }
+rio_api = { version = "0.7", path="https://github.com/andrefs/lax-rio/" }
