@@ -275,14 +275,14 @@ fn parse_statement<E: From<TurtleError>>(
             &parser.base_iri,
         )?);
         Ok(())
-    } else if parser.read.starts_with_ignore_ascii_case(b"BASE") {
+    } else if parser.read.starts_with(b"BASE") {
         parser.base_iri = Some(parse_sparql_base(
             &mut parser.read,
             &mut parser.temp_buf,
             &parser.base_iri,
         )?);
         Ok(())
-    } else if parser.read.starts_with_ignore_ascii_case(b"PREFIX") {
+    } else if parser.read.starts_with(b"PREFIX") {
         parse_sparql_prefix(
             &mut parser.read,
             &mut parser.prefixes,
